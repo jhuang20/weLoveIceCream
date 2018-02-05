@@ -31,18 +31,22 @@ String retStr = "";
       retStr= "(" + row + "," + col + ")";    }
    else{
     if(a[row][col]<value) {
-      search(row+1, col, value);//moves to next row, last number in array
+      search(row+1, size, value);//moves to next row, last number in array
     }
-    else if(a[row][col]>value){
-      search(row, col-1, value);
-	}
-}
-  return retStr;
-}
+    else if(a[row][col]>value){//if its still possibble that the row has the number(still larger)
+      search(row, col-1, value);//moves left in the list
+	   }
+    else {
+      search(row+1, size, value);
+    }
+
+    }
+    return retStr;
+  }
 //main class
   public static void main(String[] args) {
     MatrixFinder test=new MatrixFinder();
-    int[][] b=new int[100000][100000];//make a test array
+    int[][] b=new int[10000][10000];//make a test array
     int c=0;
     //construct an array
     for(int i=0; i<b.length; i++) {
@@ -60,8 +64,12 @@ String retStr = "";
     System.out.println(System.currentTimeMillis());
     System.out.println(test.isThere(b, 8996700));
     System.out.println(System.currentTimeMillis());
-    System.out.println(test.isThere(b, 120));
+    System.out.println(test.isThere(b, 0));
+    System.out.println(System.currentTimeMillis());
     System.out.println(test.isThere(b, -1));
-    System.out.println(test.isThere(b, 1000));
+    System.out.println(System.currentTimeMillis());
+    System.out.println(test.isThere(b, 1287879879));
+    System.out.println(System.currentTimeMillis());
+
   }
 }
