@@ -42,7 +42,7 @@ String retStr = "";
 //main class
   public static void main(String[] args) {
     MatrixFinder test=new MatrixFinder();
-    int[][] b=new int[10000][10000];//make a test array
+    int[][] b=new int[100000][100000];//make a test array
     int c=0;
     //construct an array
     for(int i=0; i<b.length; i++) {
