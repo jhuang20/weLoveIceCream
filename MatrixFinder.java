@@ -60,12 +60,15 @@ String retStr = "";
       for( int i : row )
         System.out.print( i + " ");
 	}*/
+
     System.out.println("\n");
-    System.out.println(System.currentTimeMillis());
+    long aa=System.currentTimeMillis();
     System.out.println(test.isThere(b, 8996700));
-    System.out.println(System.currentTimeMillis());
+    long bb=System.currentTimeMillis();
+    System.out.println((bb-aa)+"milisecond" );
     System.out.println(test.isThere(b, 0));
-    System.out.println(System.currentTimeMillis());
+    long cc=System.currentTimeMillis();
+    System.out.println(cc-bb);
     System.out.println(test.isThere(b, -1));
     System.out.println(System.currentTimeMillis());
     System.out.println(test.isThere(b, 1287879879));
