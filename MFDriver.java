@@ -58,7 +58,8 @@ public class MFDriver {
     // System.out.println("Average Time Worst Case: " + avgTime/100.0 );
    }
 */
-  System.out.println("target, time, size\n");
+
+  System.out.println("target, size, runtime\n");
   for (int c=1000; c<8000; c+=50){
     row=c;
     col=c;
@@ -70,10 +71,10 @@ public class MFDriver {
       }
     }
 
-   for (int i = 0; i < 10; i ++){
 
-	   test.printToCSV(test, b, 1000);
-   }
+
+	   test.printToCSV(test, b, b.length);// case scenario
+
 }
      /**
     long aa=System.currentTimeMillis();

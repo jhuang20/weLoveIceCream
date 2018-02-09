@@ -28,7 +28,8 @@ String retStr = "";
     }
     //base case 2: we found the number, hooray!
     else if (a[row][col]==value) {
-      retStr= "(" + row + "," + col + ")";    }
+      retStr= "(" + row + "," + col + ")";
+    return retStr;   }
     else if (a[row][col]<value) {
       search(row+1, size, value);//moves to next row, last number in array
     }
@@ -43,12 +44,13 @@ String retStr = "";
     return retStr;
   }
 
+//prints out data in CSV form
     public static void printToCSV(MatrixFinder test, int[][] testedMatrix, int target){
         //System.out.println("target, size (nanos), size");
         long pre = System.nanoTime();
         test.isThere(testedMatrix, target);
 		long current = System.nanoTime();
-        System.out.println((current-pre) + ", " + testedMatrix.length + ", " + target);
+        System.out.println(target + ", " + testedMatrix.length + ", " + (current-pre));
     }
 //main class
 }
