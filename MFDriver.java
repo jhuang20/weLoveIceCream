@@ -60,7 +60,7 @@ public class MFDriver {
    
    
    for (int i = 0; i < 100; i ++){
-	   printToCSV(test, b, 1000);
+	   printToCSV(test, test.a, 1000);
    }
    
      /**
