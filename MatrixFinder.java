@@ -29,8 +29,7 @@ String retStr = "";
     //base case 2: we found the number, hooray!
     else if (a[row][col]==value) {
       retStr= "(" + row + "," + col + ")";    }
-   else{
-    if(a[row][col]<value) {
+    else if (a[row][col]<value) {
       search(row+1, size, value);//moves to next row, last number in array
     }
     else if(a[row][col]>value){//if its still possibble that the row has the number(still larger)
@@ -40,8 +39,16 @@ String retStr = "";
       search(row+1, size, value);
     }
 
-    }
+
     return retStr;
   }
+  
+    public static void printToCSV(MatrixFinder test, int[][] testedMatrix, int target){
+        System.out.println("target, size (nanos), size");
+        long pre = System.nanoTime();
+        test.isThere(testedMatrix, target);
+		long current = System.nanoTime();
+        System.out.println(target + ", " + (pre - current) + ", " + testedMatrix.length + "x" + testedMatrix[0].length);
+    }
 //main class
 }

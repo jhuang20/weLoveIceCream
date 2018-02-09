@@ -43,7 +43,7 @@ public class MFDriver {
       avgTime += time;
       //System.out.println(time + "nanoseconds" );
      }
-     System.out.println("Average Time Best Case: " + avgTime/100.0 );
+     //System.out.println("Average Time Best Case: " + avgTime/100.0 );
 
      avgTime = 0; //reset avg time
      System.out.println("\n");
@@ -55,8 +55,14 @@ public class MFDriver {
       avgTime += time;
       //System.out.println(time + "nanoseconds" );
      }
-     System.out.println("Average Time Worst Case: " + avgTime/100.0 );
+    // System.out.println("Average Time Worst Case: " + avgTime/100.0 );
    }
+   
+   
+   for (int i = 0; i < 100; i ++){
+	   printToCSV(test, b, 1000);
+   }
+   
      /**
     long aa=System.currentTimeMillis();
     System.out.println(test.isThere(b, 8996700));
