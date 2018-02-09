@@ -1,6 +1,7 @@
 # weLoveIceCream
  Shafali Gupta, James Huang, Kevin Feng
- Matrix Finder
+ Lab 00
+ 2018-02-09
 ### Hypothesis:
  For an  n*n matrix, the worst execution time for our search mathod is O(n)
 ### Background:
