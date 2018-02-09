@@ -42,13 +42,13 @@ String retStr = "";
 
     return retStr;
   }
-  
+
     public static void printToCSV(MatrixFinder test, int[][] testedMatrix, int target){
-        System.out.println("target, size (nanos), size");
+        //System.out.println("target, size (nanos), size");
         long pre = System.nanoTime();
         test.isThere(testedMatrix, target);
 		long current = System.nanoTime();
-        System.out.println(target + ", " + (pre - current) + ", " + testedMatrix.length + "x" + testedMatrix[0].length);
+        System.out.println((current-pre) + ", " + testedMatrix.length + ", " + target);
     }
 //main class
 }

@@ -2,7 +2,7 @@ public class MFDriver {
    public static void main(String[] args) {
     MatrixFinder test=new MatrixFinder();
     int d=0;
-    /*int row = 1000;
+    int row = 1000;
     int col = 1000;
     int[][] b=new int[row][col];//make a test array
 
@@ -23,7 +23,7 @@ public class MFDriver {
 
 
      //run time comparisons
-     for (int c=1000; c<8000; c+=50) {
+     /*for (int c=1000; c<8000; c+=50) {
        int row=c;
        int col=c;
        int[][] b=new int[c][c];
@@ -57,12 +57,24 @@ public class MFDriver {
      }
     // System.out.println("Average Time Worst Case: " + avgTime/100.0 );
    }
-   
-   
-   for (int i = 0; i < 100; i ++){
-	   printToCSV(test, test.a, 1000);
+*/
+  System.out.println("target, time, size\n");
+  for (int c=1000; c<8000; c+=50){
+    row=c;
+    col=c;
+    b=new int[c][c];
+    for(int i=0; i<b.length; i++) {
+      for(int a=0; a<b.length; a++) {
+        b[i][a]=d;
+        d+=1;
+      }
+    }
+
+   for (int i = 0; i < 10; i ++){
+
+	   test.printToCSV(test, b, 1000);
    }
-   
+}
      /**
     long aa=System.currentTimeMillis();
     System.out.println(test.isThere(b, 8996700));
